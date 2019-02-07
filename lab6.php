@@ -10,7 +10,7 @@
 <body>
 
 <?php
-// function to calculate converted temperature
+// function to calculate converted temperatures
 function convertTemp($temp, $unit1, $unit2)
 {
     // conversion formulas
