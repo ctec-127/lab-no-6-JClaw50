@@ -13,15 +13,7 @@
 // function to calculate converted temperatures
 function convertTemp($temp, $unit1, $unit2)
 {
-    // conversion formulas
-    // Celsius to Fahrenheit = T(°C) × 9/5 + 32
-    // Celsius to Kelvin = T(°C) + 273.15
-    // Fahrenheit to Celsius = (T(°F) - 32) × 5/9
-    // Fahrenheit to Kelvin = (T(°F) + 459.67)× 5/9
-    // Kelvin to Fahrenheit = T(K) × 9/5 - 459.67
-    // Kelvin to Celsius = T(K) - 273.15
-
-    // You need to develop the logic to convert the temperature based on the selections and input made
+    // Logic to convert the temperature based on the selections and input made
     switch($temp)
     {
         case $unit1 == 'celsius' && $unit2 == 'farenheit':
@@ -48,12 +40,6 @@ function convertTemp($temp, $unit1, $unit2)
 
 // Logic to check for POST and grab data from $_POST
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Store the original temp and units in variables
-    // You can then use these variables to help you make the form sticky
-    // then call the convertTemp() function
-    // Once you have the converted temperature you can place PHP within the converttemp field using PHP
-    // I coded the sticky code for the originaltemp field for you
-
     $originalTemperature = $_POST['originaltemp'];
     $originalUnit = $_POST['originalunit'];
     $conversionUnit = $_POST['conversionunit'];
@@ -63,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo '<p>choose a dang unit user!</p>';
     }
 
-    //Set sticky dropdown 
+    //Setting up sticky dropdowns
     if (isset($_POST['originalunit'])){
         $originalunit = $_POST['originalunit'];
     } else {
